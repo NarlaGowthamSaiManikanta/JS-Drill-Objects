@@ -1,11 +1,11 @@
 function keys(obj) {
-    let keys = [];
+    let objKeys = [];
 
     for (var key in obj) {
-        keys.push(key);
+        objKeys.push(key);
     }
 
-    return keys;
+    return objKeys;
 }
 
 module.exports = keys;
