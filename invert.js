@@ -2,7 +2,7 @@ function invert (obj) {
     let invertedObj = {};
 
     for (key in obj) {
-        value = obj[key];
+        let value = obj[key];
         invertedObj[value] = key;
     }
 

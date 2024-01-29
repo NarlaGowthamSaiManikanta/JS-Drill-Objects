@@ -2,7 +2,7 @@ function values(obj) {
     let objValues = [];
 
     for (key in obj) {
-        value = obj[key];
+        let value = obj[key];
         objValues.push(value);
     }
 

@@ -2,7 +2,7 @@ function mapObject (obj, cb) {
     let mapObj = {};
 
     for (key in obj) {
-        value = obj[key];
+        let value = obj[key];
         mapObj[key] = cb(value, key);
     }
 
