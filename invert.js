@@ -1,12 +1,16 @@
-function invert (obj) {
-    let invertedObj = {};
+function invert(obj) {
+    if (typeof (obj) === 'object' && !Array.isArray(obj)) {
+        let invertedObj = {};
 
-    for (key in obj) {
-        let value = obj[key];
-        invertedObj[value] = key;
+        for (key in obj) {
+            let value = obj[key];
+            invertedObj[value] = key;
+        }
+
+        return invertedObj;
+    } else {
+        console.log('First Argument should be an Object.');
     }
-
-    return invertedObj;
 }
 
 module.exports = invert;

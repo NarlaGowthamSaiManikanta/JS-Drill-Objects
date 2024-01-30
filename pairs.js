@@ -1,11 +1,15 @@
-function pairs (obj) {
-    let keyValuepairs = [];
+function pairs(obj) {
+    if (typeof (obj) === 'object' && !Array.isArray(obj)) {
+        let keyValuepairs = [];
 
-    for (key in obj) {
-        keyValuepairs.push([key, obj[key]])
+        for (key in obj) {
+            keyValuepairs.push([key, obj[key]])
+        }
+
+        return keyValuepairs;
+    } else {
+        console.log('First Argument should be an Object.');
     }
-
-    return keyValuepairs;
 }
 
 module.exports = pairs;

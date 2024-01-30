@@ -1,12 +1,16 @@
 function values(obj) {
-    let objValues = [];
+    if (typeof (obj) === 'object' && !Array.isArray(obj)) {
+        let objValues = [];
 
-    for (key in obj) {
-        let value = obj[key];
-        objValues.push(value);
+        for (key in obj) {
+            let value = obj[key];
+            objValues.push(value);
+        }
+
+        return objValues;
+    } else {
+        console.log('First Argument should be an Object.');
     }
-
-    return objValues;
 }
 
 module.exports = values;
